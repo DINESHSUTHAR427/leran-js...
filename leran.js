@@ -419,7 +419,7 @@
 // }
 // let dest = Object.assign({},src);
 
-// // let dest = {...src};
+// let dest = {...src};
 // console.log("src :",src);
 // console.log("dest :",dest);
 
@@ -452,3 +452,18 @@
 
 
 //JS DOM MANIUPILATION
+// let mydiv = document.querySelector('#mydiv');
+
+// let newElement = document.createElement('span');
+// newElement.textContent = "This is new element";
+// beforebegine and afterbegine and beforeend and afterend
+
+// mydiv.insertAdjacentElement('afterend',newElement);
+
+
+// let parent = document.querySelector('#mydiv');
+// let child = document.querySelector('#fpara');
+
+// parent.removeChild(child);
+
+
