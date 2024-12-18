@@ -467,3 +467,27 @@
 // parent.removeChild(child);
 
 
+//how to css change with DOM
+//1 .style se
+//2 .cssText se
+
+// let secondElement = document.getElementById('sdiv');
+// secondElement.style.cssText = "backgroundcolor: red; color: white; padding:1rem; border: 1px solid black;"
+// secondElement.setAttribute('class','thdiv');
+
+
+// EVENTS 
+// <EVENT target> .addEventListener('type of event', 'function of event')
+
+// function changeText() {
+//     let fpara = document.getElementById('fpara');
+//     fpara.textContent = "hello dinesh";
+// }
+// let fpara = document.getElementById('fpara');
+// fpara.addEventListener('click', changeText);
+// fpara.removeEventListener('click', changeText);git 
+
+// let anchorElement = document.getElementById('fanchor');
+// anchorElement.addEventListener('click', function(event) {
+//     event.preventDefault();
+//     anchorElement.textContent= "click done bhai"});
