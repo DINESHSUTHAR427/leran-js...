@@ -491,3 +491,106 @@
 // anchorElement.addEventListener('click', function(event) {
 //     event.preventDefault();
 //     anchorElement.textContent= "click done bhai"});
+
+
+//how to chack the preformanc of code
+
+// const t1 = performance.now()
+// for(let i= 0; i <= 100; i++){
+//     let para =  document.createElement('p')
+//     para.textcontant = "hello love  my fimaliy"
+//     document.body.appendChild(para)
+
+// }
+// const t2 = performance.now()
+// console.log(t2-t1);
+
+//best code whan no refole and no referns
+//how can this possible with help DocumantFragment()
+
+// let fargment = document.createDocumentFragment();
+
+// for(let i = 0; i <= 100; i++) {
+//     let para = document.createElement('p');
+//     para.textContent = "hello love my family" + i + 100;
+    //no reflow and no repaint for the below line
+//     fragment.appendChild(para);
+// }
+//the below line takes 1 reflow and 1 repaint
+// document.body.appendChild(fragment);
+
+//PROMISE
+
+// let firstpromise = new Promise((resolve , reject) => {
+//     console.log("hello");
+    // resolve();
+//     reject ( new Error("internal server Error") );
+// })
+
+
+// let secpromise = new Promise((  resolve , reject ) => {
+//     setTimeout(() => {
+//         console.log("Developer");
+//     }, 15000);
+//     resolve(1);
+// });
+
+// let Promise1 = new Promise ((resolve, reject) => { 
+//     let success = true;
+//     if (success){
+//         resolve(10)
+//     }else {
+//         reject("internal sever Error");
+
+//     }
+//     });
+
+//     Promise1.then ((message) => {
+//         console.log("frist msg: " + message);
+//         return 20;
+//     }).then((message) => {
+//         console.log("second msg: " + message);  
+//     }).catch((error) => {
+//         console.log( error);
+//     });
+
+// let promise1 = new Promise((resolve, reject) => {
+//     setTimeout(resolve,3000,"frist");
+  
+// });
+// let promise2 = new Promise((resolve, reject) => {
+//     setTimeout(resolve,3000,"second");
+  
+// });
+// let promise3 = new Promise((resolve, reject) => {
+//     setTimeout(resolve,3000,"thrid");
+  
+// })
+// Promise.all([promise1,promise2,promise3]).then((values) => {
+//     console.log(values);
+// })
+
+
+// .catch((error) => {
+//     console.log(error);
+// });
+
+// async function getData() {
+//     setTimeout(() => {
+//         console.log("I am inside set Timeout block");
+//     }, 3000);
+    
+// }
+
+// let output = getData();
+//await
+
+//fetch API
+
+async function getData() {
+    let reponse = await fetch ('https://jsonplaceholder.typicode.com/comments?postId=1');
+    //parse json -async
+    let data = await response.json();
+    console.log(data);
+}
+getData();
